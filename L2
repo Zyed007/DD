@@ -1,3 +1,12 @@
+import numpy as np
+import pandas as pd
+data=pd.DataFrame(data=pd.read_csv('/content/drive/My Drive/Lab/lab2_1.csv')) 
+concepts=np.array(data.iloc[:,0:-1])
+target=np.array(data.iloc[:,-1])
+
+print(concepts)
+print(target)
+
 def learn(concepts,target):
   specific_h=concepts[0].copy()
   print("\n\t\t\t\t\t\tinitialization of specific_h and general_h\n") 
